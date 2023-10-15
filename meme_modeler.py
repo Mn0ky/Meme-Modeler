@@ -1,41 +1,72 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
 import os
+
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
 
 from Meme import Meme
 
 
 def main():
-    # Want months represent numerically, in order to fit on y-axis
+    # All meme curves and their data
     memes: list[Meme] = initialize_memes()
+    # For the 4 trend types, will be used as the number of clusters
+    #trend_types = os.listdir('Dataset')
+    #purge_ds_store(trend_types)
 
     for meme in memes:
-        print("reading rankings for meme: " + meme.name + " of type: " + meme.trend_type)
         meme.normalize_ranks()
-        #meme.save_curve_plot(False, 'Normalized', f'{meme.name}_normalized.png')
+        meme.preprocess_ranks()
+        #meme.save_curve_plot(False, meme.name)
+        print("meme: " + meme.name + " (" + str(len(meme.ranks)) + ")")
+        #print("ranks: \n" + str(meme.ranks))
 
+    all_meme_ranks = [meme.ranks for meme in memes]
+    # all_meme_labels = [meme.trend_type for meme in memes]
+    # all_meme_label_indexes = str([trend_types.index(trend) for trend in all_meme_labels])
+
+    kmeans = KMeans(init="k-means++", n_clusters=4, n_init=400, random_state=0)
+    kmeans.fit(all_meme_ranks)
+    for i in range(len(kmeans.labels_)):
+        memes[i].cluster = kmeans.labels_[i]
+
+    print(f'Labels:\n{str(kmeans.labels_)}')
+    for i in range(4):
+        print(f'Cluster {i} Entries: {len([1 for n in kmeans.labels_ if n == i])}')
+
+    memes.sort(key=lambda a_meme: a_meme.cluster)
     plot_all_memes_of_each_type(memes)
-
-    print("finished!!")
 
 
 def initialize_memes() -> list[Meme]:
-    # File paths to all meme type folders
-    purge_ds_store(Meme.meme_types)
+    meme_names = os.listdir('Dataset')
+    purge_ds_store(meme_names)
+
     memes: list[Meme] = []
 
-    for meme_type in Meme.meme_types:
-        meme_type_path = os.path.join('Dataset', meme_type)
-
-        meme_csvs = os.listdir(meme_type_path)
-        purge_ds_store(meme_csvs)
-        for meme_csv in meme_csvs:
-            meme_csv_path = os.path.join(meme_type_path, meme_csv)
-            new_meme = Meme(meme_csv_path, meme_type)
-            memes.append(new_meme)
+    for meme_name in meme_names:
+        meme_path = os.path.join('Dataset', meme_name)
+        new_meme = Meme(meme_path, "blank")
+        memes.append(new_meme)
 
     return memes
+
+
+# def initialize_memes_old() -> list[Meme]:
+#     # File paths to all meme type folders
+#     purge_ds_store(Meme.meme_types)
+#     memes: list[Meme] = []
+#
+#     for meme_type in Meme.meme_types:
+#         meme_type_path = os.path.join('Dataset', meme_type)
+#
+#         meme_csvs = os.listdir(meme_type_path)
+#         purge_ds_store(meme_csvs)
+#         for meme_csv in meme_csvs:
+#             meme_csv_path = os.path.join(meme_type_path, meme_csv)
+#             new_meme = Meme(meme_csv_path, meme_type)
+#             memes.append(new_meme)
+#
+#     return memes
 
 
 def purge_ds_store(paths: list[str]) -> None:
@@ -46,21 +77,24 @@ def purge_ds_store(paths: list[str]) -> None:
 
 def plot_all_memes_of_each_type(memes: list[Meme]):
     plt.clf()
-    trend_type = memes[0].trend_type
+    trend_type = memes[0].cluster
     plt.title(f'Ranking of "{trend_type}" Memes Over time')
     plt.ylabel("Meme Ranking")
     plt.xlabel("Months")
 
+    last_meme_index = len(memes) - 1
+    index = 0
     for meme in memes:
-        if meme.trend_type != trend_type:
-            plt.savefig(os.path.join('Plots', 'Normalized', f'all_{trend_type}_memes_normalized.png'))
-            trend_type = meme.trend_type
+        if meme.cluster != trend_type or index == last_meme_index:
+            plt.savefig(os.path.join('Plots', 'Normalized', f'all_{trend_type}_memes.png'))
+            trend_type = meme.cluster
             plt.clf()
-            plt.title(f'Ranking of "{trend_type}" Memes Over time')
+            plt.title(f'Ranking of "Cluster {trend_type}" Memes Over time')
             plt.ylabel("Meme Ranking")
             plt.xlabel("Months")
 
         plt.plot(Meme.months, meme.ranks)
+        index += 1
 
 
 if __name__ == '__main__':
