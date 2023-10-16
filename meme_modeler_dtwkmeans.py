@@ -1,14 +1,14 @@
 import os
 
 import matplotlib.pyplot as plt
-from sklearn.cluster import KMeans
+from tslearn.clustering import TimeSeriesKMeans
 
 from Meme import Meme
 
 
 def main():
-    # All meme curves and their data
-    memes: list[Meme] = initialize_memes()
+
+    memes: list[Meme] = initialize_memes()  # All meme curves and their data
     # For the 4 trend types, will be used as the number of clusters
     #trend_types = os.listdir('Dataset')
     #purge_ds_store(trend_types)
@@ -24,16 +24,17 @@ def main():
     # all_meme_labels = [meme.trend_type for meme in memes]
     # all_meme_label_indexes = str([trend_types.index(trend) for trend in all_meme_labels])
 
-    kmeans = KMeans(init="k-means++", n_clusters=4, n_init=400, random_state=0)
+    kmeans = TimeSeriesKMeans(n_clusters=4, metric="softdtw", max_iter=400, random_state=0)
     kmeans.fit(all_meme_ranks)
-    for i in range(len(kmeans.labels_)):
-        memes[i].cluster = kmeans.labels_[i]
+
+    for i, label in enumerate(kmeans.labels_):
+        memes[i].cluster = label
 
     print(f'Labels:\n{str(kmeans.labels_)}')
     for i in range(4):
         print(f'Cluster {i} Entries: {len([1 for n in kmeans.labels_ if n == i])}')
 
-    memes.sort(key=lambda a_meme: a_meme.cluster)
+    memes.sort(key=lambda a_meme: a_meme.cluster) # Sorts memes by cluster #; ascending order
     plot_all_memes_of_each_type(memes)
 
 
@@ -78,7 +79,7 @@ def purge_ds_store(paths: list[str]) -> None:
 def plot_all_memes_of_each_type(memes: list[Meme]):
     plt.clf()
     trend_type = memes[0].cluster
-    plt.title(f'Ranking of "{trend_type}" Memes Over time')
+    plt.title(f'Ranking of Cluster "{trend_type}" Memes Over time')
     plt.ylabel("Meme Ranking")
     plt.xlabel("Months")
 
@@ -86,7 +87,7 @@ def plot_all_memes_of_each_type(memes: list[Meme]):
     index = 0
     for meme in memes:
         if meme.cluster != trend_type or index == last_meme_index:
-            plt.savefig(os.path.join('Plots', 'Normalized', f'all_{trend_type}_memes.png'))
+            plt.savefig(os.path.join('Plots', 'dtwkmeans', f'all_{trend_type}_memes.png'))
             trend_type = meme.cluster
             plt.clf()
             plt.title(f'Ranking of "Cluster {trend_type}" Memes Over time')
