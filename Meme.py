@@ -44,7 +44,7 @@ class Meme:
         # self.ranks = self.ranks.flatten()  # Back to 1D
         print(f'{self.name} has {len(self.ranks)} ranks:\n{str(self.ranks)}')
         # Window of 6, don't want to smooth too much
-        self.ranks = pd.Series(self.ranks).rolling(6).mean().fillna(0).to_numpy()
+        self.ranks = pd.Series(self.ranks).rolling(5).mean().fillna(0).to_numpy()
         #print(str(self.ranks))
 
     # Attempts to "capture the period of the trend"

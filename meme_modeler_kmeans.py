@@ -18,7 +18,7 @@ def main():
         meme.preprocess_ranks()
         # if len(meme.ranks) != 43:
         #     print(f'{meme.name} has {len(meme.ranks)} ranks:\n{str(meme.ranks)}')
-        #meme.save_curve_plot(False, meme.name)
+        meme.save_curve_plot(False, meme.name)
         print("meme: " + meme.name + " (" + str(len(meme.ranks)) + ")")
         #print("ranks: \n" + str(meme.ranks))
 

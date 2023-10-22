@@ -14,7 +14,6 @@ def main():
     #purge_ds_store(trend_types)
 
     for meme in memes:
-        meme.normalize_ranks()
         meme.preprocess_ranks()
         #meme.save_curve_plot(False, meme.name)
         print("meme: " + meme.name + " (" + str(len(meme.ranks)) + ")")
