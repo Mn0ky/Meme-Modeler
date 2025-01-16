@@ -3,3 +3,4 @@
 /Include
 /share
 /Scripts
+/bin
