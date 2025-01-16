@@ -1,17 +1,21 @@
 import os
 import shutil
 
-import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
+import matplotlib.pyplot as plt
 import numpy as np
-from sklearn import metrics
 from sklearn import svm
+import sklearn.metrics as metrics
 from sklearn.cluster import KMeans
-from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report
+from sklearn.metrics import log_loss
 from sklearn.metrics import silhouette_score
-# from tslearn.barycenters import softdtw_barycenter
+from sklearn.model_selection import train_test_split
 
 from Meme import Meme
+
+
+# from tslearn.barycenters import softdtw_barycenter
 
 
 def main():
@@ -34,17 +38,24 @@ def main():
 
     if is_supervised:
         memes.sort(key=lambda a_meme: a_meme.cluster)  # Sorts memes by cluster #; ascending order
-        clf = svm.SVC(kernel='linear')
+        clf = svm.SVC(kernel='linear', probability=True)
         all_ranks = [meme.ranks for meme in memes]
         all_cluster_targets = [meme.cluster for meme in memes]
 
         training_ranks, testing_ranks, training_cluster_targets, testing_cluster_targets = \
-            train_test_split(all_ranks, all_cluster_targets, test_size=0.2, random_state=0)
+            train_test_split(all_ranks, all_cluster_targets, test_size=0.2)
 
         clf.fit(training_ranks, training_cluster_targets)
         testing_results = clf.predict(testing_ranks)
-        acc = metrics.accuracy_score(testing_cluster_targets, testing_results)
-        print(f"Accuracy: {acc * 100}%")
+
+        print('Generating classification report...')
+        print(classification_report(testing_cluster_targets, testing_results))
+        print(all_cluster_targets)
+        y_pred = clf.predict_proba(testing_ranks)
+        cross_entropy_loss = log_loss(testing_cluster_targets, y_pred)
+        print(f'cross_entropy_loss: {cross_entropy_loss}')
+        roc_auc_score = metrics.roc_auc_score(testing_cluster_targets, y_pred, multi_class='ovo')
+        print(f'roc_auc_score: {roc_auc_score}')
         return
     # all_meme_labels = [meme.trend_type for meme in memes]
     # all_meme_label_indexes = str([trend_types.index(trend) for trend in all_meme_labels])
@@ -65,6 +76,7 @@ def main():
         print(f'Cluster {i} Entries: {len([1 for n in kmeans.labels_ if n == i])}')
 
     memes.sort(key=lambda a_meme: a_meme.cluster)  # Sorts memes by cluster #; ascending order
+    # create_scatter_plot(kmeans, memes)
     # plot_all_memes_of_each_type(memes)
     # create_labels(memes)
     print_category_distribution(memes)
@@ -102,13 +114,15 @@ def create_silhouette_graph(cluster_counts, silhouette_scores) -> None:
 
 
 def initialize_memes() -> list[Meme]:
-    meme_names = os.listdir('Dataset')
+    unlabeled_meme_data_path = os.path.join('Dataset', 'interest_over_time', 'Unlabeled Data')
+    meme_names = os.listdir(unlabeled_meme_data_path)
     purge_ds_store(meme_names)
 
     memes: list[Meme] = []
 
     for meme_name in meme_names:
-        meme_path = os.path.join('Dataset', meme_name)
+        meme_path = os.path.join(unlabeled_meme_data_path, meme_name)
+        #print(meme_path)
         if not os.path.isfile(meme_path):
             continue
         new_meme = Meme(meme_path, -1)
@@ -119,7 +133,7 @@ def initialize_memes() -> list[Meme]:
 
 def initialize_labeled_memes() -> list[Meme]:
     # File paths to all meme type folders
-    labeled_data_path = os.path.join('Dataset', 'Labeled Data')
+    labeled_data_path = os.path.join('Dataset', 'interest_over_time', 'Labeled Data')
     label_paths = os.listdir(labeled_data_path)
     purge_ds_store(label_paths)
     memes: list[Meme] = []
@@ -154,7 +168,7 @@ def plot_all_memes_of_each_type(memes: list[Meme]) -> None:
         if meme.cluster != trend_type or i == last_meme_index:
             plt.plot(np.average(np.vstack(current_clusters), axis=0), c='red')  # Average curve of the trend cluster
             current_clusters = []
-            plt.savefig(os.path.join('Plots', 'Total', f'all_{trend_type}_memes.png'))
+            plt.savefig(os.path.join('Plots', 'Total', f'all_{trend_type}_memes.svg'))
             trend_type = meme.cluster
             reset_plot(f'Ranking of Cluster "{trend_type}" Memes Over time', 'Meme Ranking', 'Months')
 
@@ -167,6 +181,25 @@ def reset_plot(title: str, y_label: str, x_label: str) -> None:
     plt.title(title)
     plt.ylabel(y_label)
     plt.xlabel(x_label)
+
+
+# def create_scatter_plot(kmeans_obj: KMeans, all_memes: list[Meme]) -> None:
+#     # Getting the Centroids
+#     reset_plot("Scatterplot of Resultant Clusters", '', '')
+#     centroids = kmeans_obj.cluster_centers_
+#     labels = kmeans_obj.labels_
+#     u_labels = np.unique(labels)
+#
+#     # plotting the results:
+#
+#     # for i in u_labels:
+#     #     plt.scatter([meme.ranks for meme in all_memes if meme.cluster == i], df[labels == i, 1], label=i)
+#
+#     plt.figure(figsize=(8, 6))
+#         plt.scatter(Meme.months, [meme.cluster for meme in all_memes], c=kmeans_obj.labels_.astype(float))
+#     plt.scatter(centroids[:, 0], centroids[:, 1], s=80, color='k')
+#     plt.legend()
+#     plt.show()
 
 
 def create_labels(memes: list[Meme]) -> None:
@@ -186,47 +219,57 @@ def create_labels(memes: list[Meme]) -> None:
 
 def print_category_distribution(all_memes: list[Meme]) -> None:
     cat_types = os.listdir('Categories')
+    labeled_clusters_path = os.path.join('Dataset', 'interest_over_time', 'Labeled Data')
+    labeled_clusters = os.listdir(labeled_clusters_path)
     purge_ds_store(cat_types)
+    purge_ds_store(labeled_clusters)
     all_meme_names = [meme.name for meme in all_memes]
 
     # Calculate the number of rows and columns needed
     num_rows = len(cat_types) // 2 + len(cat_types) % 2
+    num_rows -= 1
     num_cols = min(2, len(cat_types))
 
     # Use gridspec to handle subplot layout
-    gs = gridspec.GridSpec(num_rows, num_cols, wspace=0.3, hspace=0.5)
+    gs = gridspec.GridSpec(num_rows, num_cols, wspace=0.8, hspace=0.15)
 
     plt.figure(figsize=(12, num_rows * 4))
 
-    for i, cat_dir in enumerate(cat_types):
-        cat_labels: [int] = []
-        category_dir_path: str = os.path.join('Categories', cat_dir)
-        cat_meme_names = [name.replace('.csv', '') for name in os.listdir(category_dir_path)]
-        purge_ds_store(cat_meme_names)
-        print(f'Category dist. for "{cat_dir}" ({len(cat_meme_names)} Memes):')
+    for i in range(len(labeled_clusters)):
+        cat_label_sums: [int] = [0] * len(cat_types)  # 5 zeros
+        for j in range(len(cat_types)):
+            cur_cat_path = os.path.join('Categories', cat_types[j])
+            cur_cat = os.listdir(cur_cat_path)
+            purge_ds_store(cur_cat)
 
-        for meme_name in cat_meme_names:
-            if meme_name in all_meme_names:
-                meme_index = all_meme_names.index(meme_name)
-                found_meme = all_memes[meme_index]
-                cat_labels.append(found_meme.cluster)
+            for meme_name in cur_cat:
+                meme_name = meme_name.replace('.csv', '')
+                #print(f'looking for {meme_name}')
+                if meme_name in all_meme_names:
+                    #print(f'meme {meme_name} exists')
+                    meme_index = all_meme_names.index(meme_name)
+                    found_meme = all_memes[meme_index]
+                    if found_meme.cluster == i:
+                        cat_label_sums[j] += 1
 
-        cat_cluster_sizes: list[int] = []
-        for cluster in range(4):
-            num_cluster_memes = len([label for label in cat_labels if label == cluster])
-            cat_cluster_sizes.append(num_cluster_memes)
-            label_percentage = 100.0 * num_cluster_memes / len(cat_meme_names)
-            print(f'\tCluster {cluster}: {label_percentage:.1f}%')
+        print(f'Category dist. for Cluster {i} ({sum(cat_label_sums)} Memes):')
+
+        #cat_cluster_sizes: list[int] = []
+        for j in range(len(cat_types)):
+            num_cluster_memes = sum(cat_label_sums)
+            #cat_cluster_sizes.append(num_cluster_memes)
+            label_percentage = 100.0 * cat_label_sums[j] / num_cluster_memes
+            print(f'\t"{cat_types[j]}" Category: {label_percentage:.1f}%')
 
         # Use subplots for each category
         row, col = divmod(i, num_cols)
         ax = plt.subplot(gs[row, col])
 
-        ax.pie(cat_cluster_sizes, labels=[f'Cluster {str(cluster_num)}' for cluster_num in range(4)],
+        ax.pie(cat_label_sums, labels=[f'"{cat}" Category' for cat in cat_types],
                autopct=lambda p: f'{p:.1f}%' if p > 0 else '')
-        ax.set_title(f'{cat_dir.title()} Cluster Distribution')
+        ax.set_title(f'{labeled_clusters[i].title()} Cluster Distribution')
 
-    plt.savefig(os.path.join('Plots', 'Misc.', 'category_cluster_dist.png'))
+    plt.savefig(os.path.join('Plots', 'Misc.', 'category_cluster_dist.svg'))
 
 
 if __name__ == '__main__':

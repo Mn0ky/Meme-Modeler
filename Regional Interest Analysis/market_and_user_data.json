@@ -1,0 +1,1254 @@
+{
+    "countries": [
+        {
+            "name": "Afghanistan",
+            "user_count": 2290134.7,
+            "market_share": 95.49
+        },
+        {
+            "name": "Albania",
+            "user_count": 1568783.4719999998,
+            "market_share": 96.8
+        },
+        {
+            "name": "Algeria",
+            "user_count": 11434249.559999999,
+            "market_share": 98.01
+        },
+        {
+            "name": "American Samoa",
+            "user_count": 0.0,
+            "market_share": 94.72
+        },
+        {
+            "name": "Andorra",
+            "user_count": 61665.681,
+            "market_share": 94.34
+        },
+        {
+            "name": "Angola",
+            "user_count": 5805464.118,
+            "market_share": 96.63
+        },
+        {
+            "name": "Anguilla",
+            "user_count": 0.0,
+            "market_share": 88.22
+        },
+        {
+            "name": "Antarctica",
+            "user_count": 0.0,
+            "market_share": 96.22
+        },
+        {
+            "name": "Antigua & Barbuda",
+            "user_count": 60484.1608,
+            "market_share": 90.05
+        },
+        {
+            "name": "Argentina",
+            "user_count": 27607166.5,
+            "market_share": 95.62
+        },
+        {
+            "name": "Armenia",
+            "user_count": 1578560.853389898,
+            "market_share": 91.63
+        },
+        {
+            "name": "Aruba",
+            "user_count": 86791.0532,
+            "market_share": 93.03
+        },
+        {
+            "name": "Australia",
+            "user_count": 19719576.24,
+            "market_share": 93.88
+        },
+        {
+            "name": "Austria",
+            "user_count": 6922191.546218458,
+            "market_share": 88.41
+        },
+        {
+            "name": "Azerbaijan",
+            "user_count": 7151310.741286356,
+            "market_share": 90.35
+        },
+        {
+            "name": "Bahamas",
+            "user_count": 299319.5652,
+            "market_share": 84.9
+        },
+        {
+            "name": "Bahrain",
+            "user_count": 1186617.3541216631,
+            "market_share": 96.71
+        },
+        {
+            "name": "Bangladesh",
+            "user_count": 18559394.581,
+            "market_share": 97.79
+        },
+        {
+            "name": "Barbados",
+            "user_count": 208563.7388,
+            "market_share": 90.65
+        },
+        {
+            "name": "Belarus",
+            "user_count": 5576513.553,
+            "market_share": 67.3
+        },
+        {
+            "name": "Belgium",
+            "user_count": 9527698.45,
+            "market_share": 91.1
+        },
+        {
+            "name": "Belize",
+            "user_count": 136353.645,
+            "market_share": 90.19
+        },
+        {
+            "name": "Benin",
+            "user_count": 636890.64,
+            "market_share": 96.53
+        },
+        {
+            "name": "Bermuda",
+            "user_count": 63053.583999999995,
+            "market_share": 83.6
+        },
+        {
+            "name": "Bhutan",
+            "user_count": 223116.171,
+            "market_share": 89.81
+        },
+        {
+            "name": "Bolivia",
+            "user_count": 3777277.5020000003,
+            "market_share": 95.69
+        },
+        {
+            "name": "Bosnia & Herzegovina",
+            "user_count": 1782596.1691333523,
+            "market_share": 94.38
+        },
+        {
+            "name": "Botswana",
+            "user_count": 830569.4523943743,
+            "market_share": 92.72
+        },
+        {
+            "name": "Bouvet Island",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "Brazil",
+            "user_count": 110989277.49654143,
+            "market_share": 93.63
+        },
+        {
+            "name": "British Indian Ocean Territory",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "British Virgin Islands",
+            "user_count": 0.0,
+            "market_share": 87.98
+        },
+        {
+            "name": "Brunei",
+            "user_count": 286534.3312,
+            "market_share": 95.41
+        },
+        {
+            "name": "Bulgaria",
+            "user_count": 4008563.1962000006,
+            "market_share": 96.1
+        },
+        {
+            "name": "Burkina Faso",
+            "user_count": 1090190.52,
+            "market_share": 93.86
+        },
+        {
+            "name": "Burundi",
+            "user_count": 146928.78199999998,
+            "market_share": 96.36
+        },
+        {
+            "name": "Cambodia",
+            "user_count": 2129514.3800000004,
+            "market_share": 96.01
+        },
+        {
+            "name": "Cameroon",
+            "user_count": 3615849.215570246,
+            "market_share": 98.32
+        },
+        {
+            "name": "Canada",
+            "user_count": 30873093.372,
+            "market_share": 90.62
+        },
+        {
+            "name": "Cape Verde",
+            "user_count": 219850.19759999998,
+            "market_share": 94.54
+        },
+        {
+            "name": "Caribbean Netherlands",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "Cayman Islands",
+            "user_count": 44133.219,
+            "market_share": 90.53
+        },
+        {
+            "name": "Central African Republic",
+            "user_count": 129565.81800000001,
+            "market_share": 97.41
+        },
+        {
+            "name": "Chad",
+            "user_count": 397216.654,
+            "market_share": 98.86
+        },
+        {
+            "name": "Chile",
+            "user_count": 10808591.6988,
+            "market_share": 92.76
+        },
+        {
+            "name": "China",
+            "user_count": 657120940.0,
+            "market_share": 1.7
+        },
+        {
+            "name": "Christmas Island",
+            "user_count": 0.0,
+            "market_share": 50.0
+        },
+        {
+            "name": "Cocos (Keeling) Islands",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "Colombia",
+            "user_count": 24538596.737900004,
+            "market_share": 93.7
+        },
+        {
+            "name": "Comoros",
+            "user_count": 49879.9176,
+            "market_share": 96.77
+        },
+        {
+            "name": "Congo - Brazzaville",
+            "user_count": 351579.6171,
+            "market_share": 89.12
+        },
+        {
+            "name": "Congo - Kinshasa",
+            "user_count": 2281067.64,
+            "market_share": 98.61
+        },
+        {
+            "name": "Cook Islands",
+            "user_count": 0.0,
+            "market_share": 97.57
+        },
+        {
+            "name": "Costa Rica",
+            "user_count": 2567472.64,
+            "market_share": 92.72
+        },
+        {
+            "name": "Croatia",
+            "user_count": 2906263.3373,
+            "market_share": 95.38
+        },
+        {
+            "name": "Cuba",
+            "user_count": 3294240.8510563364,
+            "market_share": 95.93
+        },
+        {
+            "name": "Cura\u00e7ao",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "Cyprus",
+            "user_count": 816010.6335,
+            "market_share": 94.9
+        },
+        {
+            "name": "Czechia",
+            "user_count": 7813145.234149391,
+            "market_share": 75.97
+        },
+        {
+            "name": "C\u00f4te d\u2019Ivoire",
+            "user_count": 2299555.5,
+            "market_share": 0.0
+        },
+        {
+            "name": "Denmark",
+            "user_count": 5417171.6525,
+            "market_share": 92.47
+        },
+        {
+            "name": "Djibouti",
+            "user_count": 168144.79,
+            "market_share": 96.07
+        },
+        {
+            "name": "Dominica",
+            "user_count": 39888.325,
+            "market_share": 89.21
+        },
+        {
+            "name": "Dominican Republic",
+            "user_count": 5097872.617,
+            "market_share": 91.75
+        },
+        {
+            "name": "Ecuador",
+            "user_count": 7275311.80769516,
+            "market_share": 94.99
+        },
+        {
+            "name": "Egypt",
+            "user_count": 32400639.588163868,
+            "market_share": 97.39
+        },
+        {
+            "name": "El Salvador",
+            "user_count": 1537584.953999409,
+            "market_share": 92.54
+        },
+        {
+            "name": "Equatorial Guinea",
+            "user_count": 244271.5138,
+            "market_share": 80.44
+        },
+        {
+            "name": "Eritrea",
+            "user_count": 32901.907499999994,
+            "market_share": 90.13
+        },
+        {
+            "name": "Estonia",
+            "user_count": 1107392.7946419634,
+            "market_share": 93.52
+        },
+        {
+            "name": "Eswatini",
+            "user_count": 281466.25,
+            "market_share": 0.0
+        },
+        {
+            "name": "Ethiopia",
+            "user_count": 7680500.982,
+            "market_share": 94.4
+        },
+        {
+            "name": "Falkland Islands (Islas Malvinas)",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "Faroe Islands",
+            "user_count": 45217.844999999994,
+            "market_share": 94.6
+        },
+        {
+            "name": "Fiji",
+            "user_count": 342419.44,
+            "market_share": 91.28
+        },
+        {
+            "name": "Finland",
+            "user_count": 4725867.78368838,
+            "market_share": 90.9
+        },
+        {
+            "name": "France",
+            "user_count": 55536356.112500004,
+            "market_share": 90.32
+        },
+        {
+            "name": "French Guiana",
+            "user_count": 0.0,
+            "market_share": 89.07
+        },
+        {
+            "name": "French Polynesia",
+            "user_count": 175894.9364,
+            "market_share": 92.09
+        },
+        {
+            "name": "French Southern Territories",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "Gabon",
+            "user_count": 748805.4834808294,
+            "market_share": 94.97
+        },
+        {
+            "name": "Gambia",
+            "user_count": 340611.35640000005,
+            "market_share": 97.6
+        },
+        {
+            "name": "Georgia",
+            "user_count": 1636542.16,
+            "market_share": 92.41
+        },
+        {
+            "name": "Germany",
+            "user_count": 69798816.75,
+            "market_share": 89.43
+        },
+        {
+            "name": "Ghana",
+            "user_count": 5357308.0200000005,
+            "market_share": 97.46
+        },
+        {
+            "name": "Gibraltar",
+            "user_count": 0.0,
+            "market_share": 91.84
+        },
+        {
+            "name": "Greece",
+            "user_count": 6885094.2573,
+            "market_share": 97.49
+        },
+        {
+            "name": "Greenland",
+            "user_count": 37548.765,
+            "market_share": 92.01
+        },
+        {
+            "name": "Grenada",
+            "user_count": 60873.552,
+            "market_share": 90.42
+        },
+        {
+            "name": "Guadeloupe",
+            "user_count": 0.0,
+            "market_share": 90.48
+        },
+        {
+            "name": "Guam",
+            "user_count": 116057.0361,
+            "market_share": 90.98
+        },
+        {
+            "name": "Guatemala",
+            "user_count": 3581677.9439999997,
+            "market_share": 94.87
+        },
+        {
+            "name": "Guernsey",
+            "user_count": 0.0,
+            "market_share": 94.34
+        },
+        {
+            "name": "Guinea",
+            "user_count": 725335.36,
+            "market_share": 99.09
+        },
+        {
+            "name": "Guinea-Bissau",
+            "user_count": 57877.8588,
+            "market_share": 92.7
+        },
+        {
+            "name": "Guyana",
+            "user_count": 240356.80000000002,
+            "market_share": 89.39
+        },
+        {
+            "name": "Haiti",
+            "user_count": 1187052.36,
+            "market_share": 98.25
+        },
+        {
+            "name": "Heard & McDonald Islands",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "Honduras",
+            "user_count": 2099404.58,
+            "market_share": 90.22
+        },
+        {
+            "name": "Hong Kong",
+            "user_count": 5773932.02073685,
+            "market_share": 89.04
+        },
+        {
+            "name": "Hungary",
+            "user_count": 7464298.5173810655,
+            "market_share": 97.44
+        },
+        {
+            "name": "Iceland",
+            "user_count": 321362.0976,
+            "market_share": 91.93
+        },
+        {
+            "name": "India",
+            "user_count": 176478278.715,
+            "market_share": 97.95
+        },
+        {
+            "name": "Indonesia",
+            "user_count": 43917781.035399996,
+            "market_share": 94.16
+        },
+        {
+            "name": "Iran",
+            "user_count": 31464917.932,
+            "market_share": 99.01
+        },
+        {
+            "name": "Iraq",
+            "user_count": 4854211.0648,
+            "market_share": 99.17
+        },
+        {
+            "name": "Ireland",
+            "user_count": 3888827.348119116,
+            "market_share": 95.62
+        },
+        {
+            "name": "Isle of Man",
+            "user_count": 0.0,
+            "market_share": 87.66
+        },
+        {
+            "name": "Israel",
+            "user_count": 6163233.54636612,
+            "market_share": 98.4
+        },
+        {
+            "name": "Italy",
+            "user_count": 33822141.476980105,
+            "market_share": 93.25
+        },
+        {
+            "name": "Jamaica",
+            "user_count": 1125031.5320355932,
+            "market_share": 91.74
+        },
+        {
+            "name": "Japan",
+            "user_count": 113411612.7945352,
+            "market_share": 78.24
+        },
+        {
+            "name": "Jersey",
+            "user_count": 0.0,
+            "market_share": 93.82
+        },
+        {
+            "name": "Jordan",
+            "user_count": 4000008.012,
+            "market_share": 96.35
+        },
+        {
+            "name": "Kazakhstan",
+            "user_count": 11410268.1,
+            "market_share": 75.09
+        },
+        {
+            "name": "Kenya",
+            "user_count": 7562257.3950000005,
+            "market_share": 97.3
+        },
+        {
+            "name": "Kiribati",
+            "user_count": 14085.6625,
+            "market_share": 86.39
+        },
+        {
+            "name": "Kosovo",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "Kuwait",
+            "user_count": 2960366.608,
+            "market_share": 96.14
+        },
+        {
+            "name": "Kyrgyzstan",
+            "user_count": 1651446.5000000002,
+            "market_share": 85.15
+        },
+        {
+            "name": "Laos",
+            "user_count": 954201.3404,
+            "market_share": 92.97
+        },
+        {
+            "name": "Latvia",
+            "user_count": 1511884.8906,
+            "market_share": 95.32
+        },
+        {
+            "name": "Lebanon",
+            "user_count": 4580269.66,
+            "market_share": 96.82
+        },
+        {
+            "name": "Lesotho",
+            "user_count": 460953.24,
+            "market_share": 95.27
+        },
+        {
+            "name": "Liberia",
+            "user_count": 244499.43180000002,
+            "market_share": 96.66
+        },
+        {
+            "name": "Libya",
+            "user_count": 1082962.8864,
+            "market_share": 98.64
+        },
+        {
+            "name": "Liechtenstein",
+            "user_count": 35319.101599999995,
+            "market_share": 88.98
+        },
+        {
+            "name": "Lithuania",
+            "user_count": 2115116.3170999996,
+            "market_share": 94.24
+        },
+        {
+            "name": "Luxembourg",
+            "user_count": 526667.1973,
+            "market_share": 88.78
+        },
+        {
+            "name": "Macao",
+            "user_count": 421587.7326,
+            "market_share": 91.73
+        },
+        {
+            "name": "Madagascar",
+            "user_count": 895991.1120000001,
+            "market_share": 94.74
+        },
+        {
+            "name": "Malawi",
+            "user_count": 960665.4177999999,
+            "market_share": 96.63
+        },
+        {
+            "name": "Malaysia",
+            "user_count": 19485732.46913759,
+            "market_share": 95.83
+        },
+        {
+            "name": "Maldives",
+            "user_count": 205368.4864,
+            "market_share": 96.58
+        },
+        {
+            "name": "Mali",
+            "user_count": 1228626.9800000002,
+            "market_share": 97.24
+        },
+        {
+            "name": "Malta",
+            "user_count": 317966.0886,
+            "market_share": 93.66
+        },
+        {
+            "name": "Marshall Islands",
+            "user_count": 8470.392,
+            "market_share": 79.4
+        },
+        {
+            "name": "Martinique",
+            "user_count": 0.0,
+            "market_share": 90.85
+        },
+        {
+            "name": "Mauritania",
+            "user_count": 453494.532,
+            "market_share": 97.82
+        },
+        {
+            "name": "Mauritius",
+            "user_count": 565062.4932284696,
+            "market_share": 94.01
+        },
+        {
+            "name": "Mayotte",
+            "user_count": 0.0,
+            "market_share": 82.86
+        },
+        {
+            "name": "Mexico",
+            "user_count": 52715738.239300005,
+            "market_share": 90.22
+        },
+        {
+            "name": "Micronesia",
+            "user_count": 32325.615999999998,
+            "market_share": 88.18
+        },
+        {
+            "name": "Moldova",
+            "user_count": 1157415.0750000002,
+            "market_share": 92.04
+        },
+        {
+            "name": "Monaco",
+            "user_count": 33365.64,
+            "market_share": 88.65
+        },
+        {
+            "name": "Mongolia",
+            "user_count": 578893.9507609489,
+            "market_share": 92.33
+        },
+        {
+            "name": "Montenegro",
+            "user_count": 379304.1,
+            "market_share": 95.55
+        },
+        {
+            "name": "Montserrat",
+            "user_count": 0.0,
+            "market_share": 85.9
+        },
+        {
+            "name": "Morocco",
+            "user_count": 19453206.503999997,
+            "market_share": 95.35
+        },
+        {
+            "name": "Mozambique",
+            "user_count": 1562322.24,
+            "market_share": 96.56
+        },
+        {
+            "name": "Myanmar (Burma)",
+            "user_count": 3779360.2640000004,
+            "market_share": 95.71
+        },
+        {
+            "name": "Namibia",
+            "user_count": 332861.3484,
+            "market_share": 92.98
+        },
+        {
+            "name": "Nauru",
+            "user_count": 0.0,
+            "market_share": 86.81
+        },
+        {
+            "name": "Nepal",
+            "user_count": 4240149.1663999995,
+            "market_share": 96.06
+        },
+        {
+            "name": "Netherlands",
+            "user_count": 15459590.554233281,
+            "market_share": 91.75
+        },
+        {
+            "name": "New Caledonia",
+            "user_count": 187635.0,
+            "market_share": 91.33
+        },
+        {
+            "name": "New Zealand",
+            "user_count": 3793860.0,
+            "market_share": 92.47
+        },
+        {
+            "name": "Nicaragua",
+            "user_count": 1092726.976,
+            "market_share": 94.26
+        },
+        {
+            "name": "Niger",
+            "user_count": 241893.62928767645,
+            "market_share": 97.52
+        },
+        {
+            "name": "Nigeria",
+            "user_count": 37669593.36,
+            "market_share": 99.3
+        },
+        {
+            "name": "Niue",
+            "user_count": 0.0,
+            "market_share": 98.82
+        },
+        {
+            "name": "Norfolk Island",
+            "user_count": 0.0,
+            "market_share": 96.93
+        },
+        {
+            "name": "North Korea",
+            "user_count": 0.0,
+            "market_share": 69.35
+        },
+        {
+            "name": "North Macedonia",
+            "user_count": 1407120.7626,
+            "market_share": 92.59
+        },
+        {
+            "name": "Northern Mariana Islands",
+            "user_count": 0.0,
+            "market_share": 87.9
+        },
+        {
+            "name": "Norway",
+            "user_count": 4947154.416,
+            "market_share": 93.72
+        },
+        {
+            "name": "Oman",
+            "user_count": 2815307.2874,
+            "market_share": 98.14
+        },
+        {
+            "name": "Pakistan",
+            "user_count": 20825162.8,
+            "market_share": 97.07
+        },
+        {
+            "name": "Palau",
+            "user_count": 0.0,
+            "market_share": 90.46
+        },
+        {
+            "name": "Palestine",
+            "user_count": 2239862.7066,
+            "market_share": 0.0
+        },
+        {
+            "name": "Panama",
+            "user_count": 1746845.8156,
+            "market_share": 91.19
+        },
+        {
+            "name": "Papua New Guinea",
+            "user_count": 550169.9450000001,
+            "market_share": 89.55
+        },
+        {
+            "name": "Paraguay",
+            "user_count": 2619010.03,
+            "market_share": 94.26
+        },
+        {
+            "name": "Peru",
+            "user_count": 12202288.302000001,
+            "market_share": 91.49
+        },
+        {
+            "name": "Philippines",
+            "user_count": 35159844.747,
+            "market_share": 92.61
+        },
+        {
+            "name": "Pitcairn Islands",
+            "user_count": 0.0,
+            "market_share": 87.5
+        },
+        {
+            "name": "Poland",
+            "user_count": 25315815.509999998,
+            "market_share": 96.39
+        },
+        {
+            "name": "Portugal",
+            "user_count": 6718045.9458,
+            "market_share": 93.47
+        },
+        {
+            "name": "Puerto Rico",
+            "user_count": 2439063.0599999996,
+            "market_share": 87.9
+        },
+        {
+            "name": "Qatar",
+            "user_count": 2026014.0284999998,
+            "market_share": 95.76
+        },
+        {
+            "name": "Romania",
+            "user_count": 10766775.843199998,
+            "market_share": 96.9
+        },
+        {
+            "name": "Russia",
+            "user_count": 101421629.16839999,
+            "market_share": 52.23
+        },
+        {
+            "name": "Rwanda",
+            "user_count": 1205055.8059999999,
+            "market_share": 92.19
+        },
+        {
+            "name": "R\u00e9union",
+            "user_count": 0.0,
+            "market_share": 90.66
+        },
+        {
+            "name": "Samoa",
+            "user_count": 42772.484,
+            "market_share": 88.35
+        },
+        {
+            "name": "San Marino",
+            "user_count": 0.0,
+            "market_share": 97.17
+        },
+        {
+            "name": "Saudi Arabia",
+            "user_count": 20789627.41514007,
+            "market_share": 95.65
+        },
+        {
+            "name": "Senegal",
+            "user_count": 2472744.516,
+            "market_share": 96.23
+        },
+        {
+            "name": "Serbia",
+            "user_count": 4426310.789261449,
+            "market_share": 95.61
+        },
+        {
+            "name": "Seychelles",
+            "user_count": 46825.783191044095,
+            "market_share": 79.6
+        },
+        {
+            "name": "Sierra Leone",
+            "user_count": 432532.8216746099,
+            "market_share": 97.33
+        },
+        {
+            "name": "Singapore",
+            "user_count": 4490643.404,
+            "market_share": 94.13
+        },
+        {
+            "name": "Sint Maarten",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "Slovakia",
+            "user_count": 4333835.4702,
+            "market_share": 96.78
+        },
+        {
+            "name": "Slovenia",
+            "user_count": 1476171.482,
+            "market_share": 94.55
+        },
+        {
+            "name": "Solomon Islands",
+            "user_count": 53763.75,
+            "market_share": 86.06
+        },
+        {
+            "name": "Somalia",
+            "user_count": 216940.5305,
+            "market_share": 96.56
+        },
+        {
+            "name": "South Africa",
+            "user_count": 26817479.99,
+            "market_share": 94.81
+        },
+        {
+            "name": "South Georgia & South Sandwich Islands",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "South Korea",
+            "user_count": 44432164.17010197,
+            "market_share": 41.88
+        },
+        {
+            "name": "South Sudan",
+            "user_count": 291545.384,
+            "market_share": 0.0
+        },
+        {
+            "name": "Spain",
+            "user_count": 35413783.9958,
+            "market_share": 96.06
+        },
+        {
+            "name": "Sri Lanka",
+            "user_count": 2230142.985,
+            "market_share": 95.83
+        },
+        {
+            "name": "St. Barth\u00e9lemy",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "St. Helena",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "St. Kitts & Nevis",
+            "user_count": 32496.520000000004,
+            "market_share": 0.0
+        },
+        {
+            "name": "St. Lucia",
+            "user_count": 92995.728,
+            "market_share": 0.0
+        },
+        {
+            "name": "St. Martin",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "St. Pierre & Miquelon",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "St. Vincent & Grenadines",
+            "user_count": 50676.288,
+            "market_share": 0.0
+        },
+        {
+            "name": "Sudan",
+            "user_count": 0.0,
+            "market_share": 99.43
+        },
+        {
+            "name": "Suriname",
+            "user_count": 228328.54559999998,
+            "market_share": 94.67
+        },
+        {
+            "name": "Svalbard & Jan Mayen",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "Sweden",
+            "user_count": 8970840.972,
+            "market_share": 91.34
+        },
+        {
+            "name": "Switzerland",
+            "user_count": 7156879.226000001,
+            "market_share": 88.15
+        },
+        {
+            "name": "Syria",
+            "user_count": 5638289.9688,
+            "market_share": 96.41
+        },
+        {
+            "name": "S\u00e3o Tom\u00e9 & Pr\u00edncipe",
+            "user_count": 48209.017700000004,
+            "market_share": 0.0
+        },
+        {
+            "name": "Taiwan",
+            "user_count": 0.0,
+            "market_share": 87.46
+        },
+        {
+            "name": "Tajikistan",
+            "user_count": 1456278.2651999998,
+            "market_share": 76.8
+        },
+        {
+            "name": "Tanzania",
+            "user_count": 3557018.64,
+            "market_share": 98.22
+        },
+        {
+            "name": "Thailand",
+            "user_count": 24409373.0127,
+            "market_share": 97.88
+        },
+        {
+            "name": "Timor-Leste",
+            "user_count": 207345.25,
+            "market_share": 94.09
+        },
+        {
+            "name": "Togo",
+            "user_count": 415437.831,
+            "market_share": 94.6
+        },
+        {
+            "name": "Tokelau",
+            "user_count": 0.0,
+            "market_share": 81.48
+        },
+        {
+            "name": "Tonga",
+            "user_count": 38336.782740477,
+            "market_share": 78.65
+        },
+        {
+            "name": "Trinidad & Tobago",
+            "user_count": 905212.464,
+            "market_share": 0.0
+        },
+        {
+            "name": "Tunisia",
+            "user_count": 5275602.396799999,
+            "market_share": 95.96
+        },
+        {
+            "name": "Turkmenistan",
+            "user_count": 690904.544,
+            "market_share": 90.71
+        },
+        {
+            "name": "Turks & Caicos Islands",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "Tuvalu",
+            "user_count": 2626.659,
+            "market_share": 44.07
+        },
+        {
+            "name": "T\u00fcrkiye",
+            "user_count": 39393633.5936,
+            "market_share": 0.0
+        },
+        {
+            "name": "U.S. Outlying Islands",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "U.S. Virgin Islands",
+            "user_count": 54016.517400000004,
+            "market_share": 84.47
+        },
+        {
+            "name": "Uganda",
+            "user_count": 1962173.1060000001,
+            "market_share": 97.99
+        },
+        {
+            "name": "Ukraine",
+            "user_count": 20932022.476013165,
+            "market_share": 86.14
+        },
+        {
+            "name": "United Arab Emirates",
+            "user_count": 7987699.704,
+            "market_share": 95.04
+        },
+        {
+            "name": "United Kingdom",
+            "user_count": 59182165.1978,
+            "market_share": 94.28
+        },
+        {
+            "name": "United States",
+            "user_count": 232422020.17,
+            "market_share": 80.17
+        },
+        {
+            "name": "Uruguay",
+            "user_count": 2084515.4652000002,
+            "market_share": 94.87
+        },
+        {
+            "name": "Uzbekistan",
+            "user_count": 10918983.5,
+            "market_share": 77.33
+        },
+        {
+            "name": "Vanuatu",
+            "user_count": 50746.276,
+            "market_share": 90.44
+        },
+        {
+            "name": "Vatican City",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "Venezuela",
+            "user_count": 17210157.06,
+            "market_share": 94.47
+        },
+        {
+            "name": "Vietnam",
+            "user_count": 37406556.64,
+            "market_share": 94.84
+        },
+        {
+            "name": "Wallis & Futuna",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "Western Sahara",
+            "user_count": 0.0,
+            "market_share": 0.0
+        },
+        {
+            "name": "Yemen",
+            "user_count": 6258370.052,
+            "market_share": 97.78
+        },
+        {
+            "name": "Zambia",
+            "user_count": 1022956.545,
+            "market_share": 98.09
+        },
+        {
+            "name": "Zimbabwe",
+            "user_count": 2267457.947949899,
+            "market_share": 93.61
+        },
+        {
+            "name": "\u00c5land Islands",
+            "user_count": 0.0,
+            "market_share": 85.49
+        }
+    ]
+}
